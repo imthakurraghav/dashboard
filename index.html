@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignmet || Dashboard</title>
+    <!-- fonts link -->
+    <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="main-content">
+        <aside class="aside">
+            <!-- sidebar starts -->
+            <div class="sidebar">
+                <ul class="top-icon">
+                    <li><a href="#"><img src="./assets/icons/Thundericon.svg" alt="Thunder"></a></li>
+                    <li  class="menuicn"><a href="#"><img src="./assets/icons/Moduleicon.svg" alt="Module"></a></li>
+                </ul>
+                <ul class="bottom-icon">
+                    <li><a href="#"><img src="./assets/icons/Settings.svg" alt="Settings"></a></li>
+                    <li><a href="#"><img src="./assets/icons/Bellicon.svg" alt="Bell"></a></li>
+                    <li><a href="#"><img src="./assets/icons/usericon.svg" alt="User"></a></li>
+                </ul>
+            </div>
+            <!-- sidebar ends -->
+
+            <!-- navbar starts -->
+            <nav>
+                <div class="navbar">
+                    <div class="logo">
+                        <div class="icon">A</div>
+                        <div class="logo_name"><h1>Acme Corp</h1><span class="iconup"></span></div>
+                    </div>
+                    <ul class="nav-links">
+                        <h2 class="nav-heading">Placement</h2>
+                        <li class="active"><a class="link" href="#">Home</a></li>
+                        <li><a class="link" href="#">Workflows <span class="notification">2</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- navbar ends -->
+        </aside>
+        <main>
+            <div class="main-content-header">
+                <h3 class="title">Acme Corp</h3>
+                <div class="button-group">
+                    <a href="#" class="btn btn-outline-primary"><img src="./assets/icons/download.svg" alt="export"> Export</a>
+                    <a href="#" class="btn btn-primary"><img src="./assets/icons/plus.svg" alt="create"> Create Placement</a>
+                </div>
+            </div>
+
+            <div class="tab-wrapper">
+                <ul class="tab-header">
+                    <li><a onclick="openTab(event,'tab1')" class="tab-button active" href="#">Placement List</a></li>
+                    <li><a onclick="openTab(event,'tab2')" class="tab-button" href="#">Learning Resources</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="tab1" class="tabcontent">
+                        <div class="search-bar-wrapper">
+                            <img src="./assets/icons/search.svg" alt="search">
+                            <input type="text" placeholder=" Search...">
+                        </div>
+        
+                        <div class="list">
+                            <table class="list_tbl">
+                                <tbody><tr>
+                                  <th id="hash">#</th>
+                                  <th>Placement</th>
+                                  <th>Year</th>
+                                  <th>Client</th>
+                                  <th>Country</th>
+                                  <th>Status</th>
+                                  <th>Remaining Policies</th>
+                                  <th>Edit</th>
+                                </tr>
+                                <tr>
+                                  <td><div class="icon logo_display">A</div></td>
+                                  <td><b>2024 Acme Corp</b></td>
+                                  <td>2024</td>
+                                  <td>Acme Corp</td>
+                                  <td>United States</td>
+                                  <td><span class="status-bg progress">In Progress</span></td>
+                                  <td>2</td>
+                                  <td><img src="./assets/icons/pen.svg" alt="pen">...</td>
+                                </tr>
+                                <tr>
+                                  <td><div class="icon logo_display">A</div></td>
+                                  <td><b>2023 Acme Corp</b></td>
+                                  <td>2023</td>
+                                  <td>Acme Corp</td>
+                                  <td>United States</td>
+                                  <td><span class="status-bg complete">Complete</span></td>
+                                  <td>2</td>
+                                  <td><img src="./assets/icons/pen.svg" alt="pen">...</td>
+                                </tr>
+                              </tbody></table>
+                        </div>
+                    </div>
+                    <div id="tab2"  class="tabcontent" style="display:none">
+                        <p style="margin-top:15px;">Nothing to show</p>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+
+    <!-- main js link -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
