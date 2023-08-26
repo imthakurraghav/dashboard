@@ -1,0 +1,17 @@
+/* responsive css starts */
+
+@media screen and (max-width: 768px) {
+    aside.aside nav {
+        display: none;
+    }
+    aside {
+        width: 80px;
+    }
+    aside.aside.navclose nav {
+        display: block;
+    }
+    aside.aside.navclose {
+        width: 324px;
+    }
+}
+

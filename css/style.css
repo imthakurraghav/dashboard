@@ -1,0 +1,262 @@
+@import url('./button.css');
+@import url('./searchform.css');
+@import url('./table.css');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --background-dark: #18191C;
+  --background-white: #ffffff;
+  --active-color1: #F3F3F3;
+  --background-alphabet: #D73665;
+  --primary-color: #1A68D6;
+  --border-color: #D8DCE1;
+  --text-dark-colour: #24272C;
+  --text-light-colour: #3E424A;
+}
+body {
+  background-color: var(--background-color4);
+  max-width: 100%;
+  overflow-x: hidden;
+}
+ul{
+  list-style: none;
+}
+/* common css starts*/
+.main-content{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+a{
+  text-decoration: none;
+  color: var(--text-dark-colour);
+}
+/* common css ends*/
+
+/* sidebar css starts */
+aside{
+    height: 100vh;
+    width: 324px;
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+
+aside.aside.navclose{
+  width: 80px;
+}
+
+.sidebar{
+  background-color: var(--background-dark);
+  width: 80px;
+  position: relative;
+  padding: 15px 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+ul.top-icon {
+  height: calc(100% - 145px);
+  overflow-y: scroll;
+}
+
+ul.top-icon::-webkit-scrollbar{
+  display: none;
+}
+
+.bottom-icon{
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: var(--background-dark);
+}
+
+/* nav css starts */
+nav{
+  background-color: var(--background-white);
+  border-right: 1px solid var(--border-color);
+  width: 244px;
+  padding: 20px 15px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+aside.aside.navclose nav{
+  display: none;
+}
+
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.navbar .logo{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.navbar .logo .iconup::after{
+  content: '';
+  background-image: url('../assets/icons/arrowdown.svg');
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 5px);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar.remove .logo .iconup::after{
+  transform: rotate(180deg);
+}
+
+.icon {
+  background-color: var(--background-alphabet);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 12px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 28px;
+  margin-right: 10px;
+}
+
+.logo_name {
+  flex: 0 0 calc(100% - 38px);
+}
+
+.nav-heading{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--background-dark);
+  margin-bottom: 12px;
+}
+
+.nav-links{
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar.remove .nav-links{
+  display: none;
+}
+
+.nav-links li {
+  padding: 10px;
+  background-color: var(--background-white);
+}
+
+.nav-links li.active{
+  background-color: var(--active-color1);
+  position: relative;
+}
+
+.nav-links li.active::before{
+  content: '';
+  background-color: var(--primary-color);
+  height: 100%;
+  width: 3px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.nav-links li.active a{
+  color: var(--primary-color);
+}
+
+.nav-links li a {
+  color: var(--text-dark-colour);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-decoration: none;
+}
+/* nav css ends */
+
+/* sidebar css ends */
+
+/* main css starts */
+main {
+  width: 100%;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+.main-content-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.main-content-header .title{
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+}
+
+ul.tab-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0 15px 0;
+  gap: 20px;
+  border-bottom: 1px solid var(--border-color);
+  overflow-x: scroll;
+}
+
+ul.tab-header::-webkit-scrollbar{
+  display: none;
+}
+
+ul.tab-header li a{
+  white-space: nowrap;
+}
+
+ul.tab-header li a.active{
+  position: relative;
+  color: var(--primary-color);
+}
+
+ul.tab-header li a.active::after{
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  bottom: -16px;
+}
+/* main css ends */

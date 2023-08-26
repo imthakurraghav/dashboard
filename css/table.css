@@ -1,0 +1,40 @@
+.list{
+    overflow-x: scroll;
+}
+.list::-webkit-scrollbar{
+    display: none;
+}
+.list_tbl{
+    overflow-x:scroll;
+    border-collapse: collapse;
+    border-spacing: 30px;
+    width: 100%;
+}
+.list_tbl th, td {
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-dark-colour);
+    white-space: nowrap;
+  }
+  #hash{
+    text-align: center;
+  }
+th:first-child, td:first-child{
+    padding-left: 50px;
+    padding-right: -100px;
+}
+.status-bg{
+    border-radius: 10px;
+    padding: 7px 10px;
+}
+.progress{
+    background-color: rgb(225, 204, 225);
+    
+}
+.complete{
+    background-color: rgb(177, 219, 219);
+}
